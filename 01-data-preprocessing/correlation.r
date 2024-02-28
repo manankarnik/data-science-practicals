@@ -1,9 +1,7 @@
 library(ggplot2)
 
 df <- read.csv("movies.csv")
-print(df)
-df[df==""] <- NA
-df <- na.omit(df)
+df <- df[complete.cases(df$RATING, df$VOTES), ]
 df$VOTES <- as.integer(gsub(",", "", df$VOTES))
 
 print(nrow(df))

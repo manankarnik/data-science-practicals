@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 df = pd.read_csv("movies.csv")
-df = df.dropna()
+df = df.dropna(subset=["RATING", "VOTES"])
 df["VOTES"] = df["VOTES"].str.replace(",", "").astype(int)
 
 correlation = df["RATING"].corr(df["VOTES"])
