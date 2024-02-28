@@ -4,7 +4,6 @@ df <- read.csv("movies.csv")
 df <- df[complete.cases(df$RATING, df$VOTES), ]
 df$VOTES <- as.integer(gsub(",", "", df$VOTES))
 
-print(nrow(df))
 correlation <- cor(df$RATING, df$VOTES, method = c("pearson"))
 cat("Correlation coefficient:", round(correlation, 2), "\n")
 

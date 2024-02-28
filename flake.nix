@@ -10,7 +10,7 @@
           pkgs = import nixpkgs {
             inherit system;
           };
-          RStudio = pkgs.rstudioWrapper.override { packages = with pkgs.rPackages; [ ggplot2 ]; };
+          RStudio = pkgs.rstudioWrapper.override { packages = with pkgs.rPackages; [ ggplot2 heatmaply ]; };
         in
         with pkgs;
         {
