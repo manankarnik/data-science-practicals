@@ -6,4 +6,4 @@ min_max_scaling <- function(column, new_min, new_max) {
 }
 
 df$SCALED_RATING <- min_max_scaling(df$RATING, 1, 10)
-print(head(df))
+head(df)
