@@ -17,11 +17,12 @@
           devShells.default = mkShell rec {
             buildInputs = [
               RStudio
-              (pkgs.python3.withPackages (python-pkgs: [
-                python-pkgs.pyarrow
-                python-pkgs.pandas
-                python-pkgs.matplotlib
-                python-pkgs.seaborn
+              (pkgs.python3.withPackages (python-pkgs: with python-pkgs; [
+                pyarrow
+                pandas
+                matplotlib
+                seaborn
+                scipy
               ]))
             ];
           };
