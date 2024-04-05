@@ -10,7 +10,7 @@
           pkgs = import nixpkgs {
             inherit system;
           };
-          RStudio = pkgs.rstudioWrapper.override { packages = with pkgs.rPackages; [ heatmaply ]; };
+          RStudio = pkgs.rstudioWrapper.override { packages = with pkgs.rPackages; [ heatmaply partykit caret pROC rattle rpart_plot RColorBrewer ]; };
         in
         with pkgs;
         {
@@ -23,6 +23,8 @@
                 matplotlib
                 seaborn
                 scipy
+                scikitlearn
+                graphviz
               ]))
             ];
           };
