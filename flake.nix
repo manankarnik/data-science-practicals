@@ -25,6 +25,7 @@
                 scipy
                 scikitlearn
                 graphviz
+                mlxtend
               ]))
             ];
           };
