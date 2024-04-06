@@ -26,6 +26,8 @@
                 scikitlearn
                 graphviz
                 mlxtend
+                nltk
+                gensim
               ]))
             ];
           };

@@ -1,0 +1,3 @@
+[submodule "07-text-analytics/british-fiction-corpus"]
+	path = 07-text-analytics/british-fiction-corpus
+	url = https://github.com/cophi-wue/british-fiction-corpus.git
